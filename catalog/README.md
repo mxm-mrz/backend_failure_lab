@@ -2,15 +2,11 @@
 
 Cases are grouped by category, technology, and level.
 
-- [Browse by category](by-category.md)
-- [Browse by technology](by-technology.md)
-- [Browse by level](by-level.md)
+Browse by level if you want the quickest path to cases that match your current experience. It answers "what can I work through right now without jumping too far ahead?" [Open the level catalog](by-level.md).
 
-Start with **Browse by level** if you want the quickest path to cases that match your current experience. It answers "what can I work through right now without jumping too far ahead?"
+Browse by category when you already know the failure pattern you want to study, such as API behavior, observability, or database problems. It answers "what kind of backend mistake do I want to learn from?" [Open the category catalog](by-category.md).
 
-Use **Browse by category** when you already know the failure pattern you want to study, such as API behavior, observability, or database problems. It answers "what kind of backend mistake do I want to learn from?"
-
-Use **Browse by technology** when you want examples tied to the tools and libraries you use every day. It answers "which cases are most relevant to my current stack?"
+Browse by technology when you want examples tied to the tools and libraries you use every day. It answers "which cases are most relevant to my current stack?" [Open the technology catalog](by-technology.md).
 
 Some cases appear in more than one category because they demonstrate a primary failure and a secondary cross-cutting pattern. For example, a database case can also show up under performance when the same bug teaches both lessons.
 
