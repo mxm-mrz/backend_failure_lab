@@ -256,3 +256,5 @@ cases/security-auth/BFL-0001-user-can-read-another-users-order/
 ## Contributing
 
 Contributions should focus on small, production-inspired backend failure cases. Start with the [case format](CASE_FORMAT.md), use the [case template](templates/case-template/), and keep each case narrow enough to explain through one failing test.
+
+**Draft vs Released:** A Released case has been fully reviewed, verified end-to-end, and is ready to use as a learning exercise. A Draft case may have code and tests present, but it has not yet been fully checked or polished — the content could be incomplete or contain errors. If you are here to learn, start with Released cases; Draft cases are visible in the catalog but are not yet recommended for structured study. If you are a contributor, Draft cases are a good place to help — reviewing and completing them is a valuable way to contribute.
