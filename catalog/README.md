@@ -2,9 +2,12 @@
 
 Cases are grouped by category, technology, and level.
 
-- Start with the level guide when you want the quickest path to cases that match your current experience. It answers "what can I work through right now without jumping too far ahead?" See the [level index](by-level.md).
-- Use the category guide when you already know the failure pattern you want to study, such as API behavior, observability, or database problems. It answers "what kind of backend mistake do I want to learn from?" See the [category index](by-category.md).
-- Use the technology guide when you want examples tied to the tools and libraries you use every day. It answers "which cases are most relevant to my current stack?" See the [technology index](by-technology.md).
+- Start with the level guide when you want the quickest path to cases that match your current experience. It answers "what can I work through right now without jumping too far ahead?"
+  Read the [level index](by-level.md).
+- Use the category guide when you already know the failure pattern you want to study, such as API behavior, observability, or database problems. It answers "what kind of backend mistake do I want to learn from?"
+  Read the [category index](by-category.md).
+- Use the technology guide when you want examples tied to the tools and libraries you use every day. It answers "which cases are most relevant to my current stack?"
+  Read the [technology index](by-technology.md).
 
 Some cases appear in more than one category because they demonstrate a primary failure and a secondary cross-cutting pattern. For example, a database case can also show up under performance when the same bug teaches both lessons.
 
