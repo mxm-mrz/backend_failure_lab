@@ -2,9 +2,9 @@
 
 Cases are grouped by category, technology, and level.
 
-- [Browse by category](by-category.md)
-- [Browse by technology](by-technology.md)
-- [Browse by level](by-level.md)
+- Browse by category: [Category index](by-category.md)
+- Browse by technology: [Technology index](by-technology.md)
+- Browse by level: [Level index](by-level.md)
 
 Browse by level if you want the quickest path to cases that match your current experience. It answers "what can I work through right now without jumping too far ahead?"
 
