@@ -5,6 +5,8 @@
 
 # Missing Database Constraint Allows Duplicate Emails
 
+## Summary
+
 The backend checks whether an email already exists before creating a user, but the database does not enforce uniqueness.
 
 This case teaches that application-level checks are not enough for data invariants.
