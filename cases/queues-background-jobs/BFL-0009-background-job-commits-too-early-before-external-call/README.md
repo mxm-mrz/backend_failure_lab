@@ -5,9 +5,11 @@
 
 # Background Job Commits Too Early Before External Call
 
-A FastAPI background task marks an order as confirmed before the external notification succeeds.
+## Summary
 
-This case teaches a partial failure: the API returns 202 immediately, but the background job leaves the database in ghost state when the external side effect fails.
+A FastAPI background task marks an order as confirmed before the external notification succeeds, so a failed notification leaves the order in a ghost state.
+
+The API returns 202 immediately, so the caller sees success while the database quietly disagrees. This case teaches partial failure: a durable commit paired with a later side effect that can still fail.
 
 ## Metadata
 
