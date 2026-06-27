@@ -37,21 +37,13 @@ Before becoming a full case, it should be checked for:
 
 ## Required Sections
 
-### Title
+### Summary
 
-A short, specific name for the failure case.
+A short overview of the failure mode and why it matters.
 
-### Category
+### Metadata
 
-The primary category from [TAGS.md](TAGS.md).
-
-### Level
-
-The expected reader level from [TAGS.md](TAGS.md).
-
-### Stack
-
-The main technologies involved in the case.
+The case ID, category, level, technologies, failure modes, patterns, and status.
 
 ### Problem
 
@@ -69,6 +61,14 @@ The user-facing or system-facing behavior that demonstrates the bug.
 
 The intentionally broken code used for the exercise.
 
+### Where the Bug Happens
+
+The specific boundary, component, or code path where the failure is introduced.
+
+### How to Catch This Bug
+
+The testing, logging, or review strategy that exposes the failure clearly.
+
 ### Failing Test
 
 A test that reproduces the failure clearly.
@@ -81,6 +81,14 @@ The reasoning process used to identify the root cause.
 
 The corrected code.
 
+### How to Run
+
+The commands needed to run the broken and fixed versions of the case.
+
+### Files
+
+The key directories or files included in the case.
+
 ### Production Notes
 
 Operational notes, monitoring hints, deployment concerns, and follow-up checks.
@@ -88,15 +96,3 @@ Operational notes, monitoring hints, deployment concerns, and follow-up checks.
 ### Trade-Offs
 
 What the fix improves and what costs or limitations it introduces.
-
-### Possible Extensions
-
-Ideas for making the case deeper without expanding the core exercise.
-
-### Evidence of Demand
-
-Why this failure mode is worth teaching.
-
-### Scalability
-
-How the issue or fix changes under higher traffic, larger data volume, or distributed execution.
