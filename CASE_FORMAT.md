@@ -96,3 +96,19 @@ Operational notes, monitoring hints, deployment concerns, and follow-up checks.
 ### Trade-Offs
 
 What the fix improves and what costs or limitations it introduces.
+
+## Optional Appendix Sections
+
+These sections can be added when they make the case more useful, but they are not required for every case.
+
+### Possible Extensions
+
+Ideas for making the case deeper without expanding the core exercise.
+
+### Evidence of Demand
+
+Why this failure mode is worth teaching.
+
+### Scalability
+
+How the issue or fix changes under higher traffic, larger data volume, or distributed execution.
