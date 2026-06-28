@@ -43,7 +43,7 @@ A short overview of the failure mode and why it matters.
 
 ### Metadata
 
-The case ID, category, level, technologies, failure modes, patterns, and status.
+The case ID, category, level, technologies, failure modes, patterns, and status. At minimum, include `ID`, `Category`, `Level`, `Technologies`, and `Status`.
 
 ### Problem
 
