@@ -145,6 +145,37 @@ make fixed CASE=BFL-0005
 - `fixed/` - реализация с middleware для request ID и структурированными логами
 - `tests/` - тесты, которые проверяют связь ответа и логов
 
+## Диаграммы
+
+Сломанный процесс:
+
+```mermaid
+flowchart TD
+    A[Клиент отправляет POST /orders/100/pay с X-Request-ID: abc-123]
+    B[Эндпоинт получает запрос, но не читает X-Request-ID]
+    C[logger.error Order not found]
+    D[logger.error Payment failed]
+    E[logger.error Database error]
+    F[Ответ возвращается без заголовка X-Request-ID]
+    G[Разработчик видит несвязанные строки логов без общего идентификатора]
+
+    A --> B --> C --> D --> E --> F --> G
+```
+
+Исправленный процесс:
+
+```mermaid
+flowchart TD
+    A[Клиент отправляет POST /orders/100/pay с X-Request-ID: abc-123]
+    B[Middleware читает X-Request-ID или генерирует новый через uuid4]
+    C[request.state.request_id устанавливается на весь жизненный цикл запроса]
+    D[Эндпоинт пишет структурированные логи с тем же request_id]
+    E[response.headers X-Request-ID устанавливается в request_id]
+    F[Разработчик фильтрует логи по request_id и восстанавливает весь запрос]
+
+    A --> B --> C --> D --> E --> F
+```
+
 ## Заметки для production
 
 Request IDs полезнее всего, когда они проходят через границы: HTTP-запрос, логи базы данных, фоновые задачи, внешние API-вызовы и сбор ошибок.

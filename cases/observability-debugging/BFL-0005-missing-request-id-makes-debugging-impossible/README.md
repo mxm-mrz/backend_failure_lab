@@ -145,6 +145,37 @@ Expected result: the tests should pass because the fixed implementation returns 
 - `fixed/` - implementation with request ID middleware and structured logs
 - `tests/` - tests that verify response/log correlation
 
+## Diagrams
+
+Broken flow:
+
+```mermaid
+flowchart TD
+    A[Client sends POST /orders/100/pay with X-Request-ID: abc-123]
+    B[Endpoint receives request but does not read X-Request-ID]
+    C[logger.error Order not found]
+    D[logger.error Payment failed]
+    E[logger.error Database error]
+    F[Response returned without X-Request-ID header]
+    G[Developer sees unrelated log lines with no shared identifier]
+
+    A --> B --> C --> D --> E --> F --> G
+```
+
+Fixed flow:
+
+```mermaid
+flowchart TD
+    A[Client sends POST /orders/100/pay with X-Request-ID: abc-123]
+    B[Middleware reads X-Request-ID or generates one with uuid4]
+    C[request.state.request_id is set for the request lifecycle]
+    D[Endpoint writes structured logs including the same request_id]
+    E[response.headers X-Request-ID is set to request_id]
+    F[Developer filters logs by request_id and reconstructs the whole request]
+
+    A --> B --> C --> D --> E --> F
+```
+
 ## Production Notes
 
 Request IDs are most useful when they are propagated across boundaries: HTTP request, database logs, worker jobs, external API calls, and error reporting.
