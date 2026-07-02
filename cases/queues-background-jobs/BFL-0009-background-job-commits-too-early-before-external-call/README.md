@@ -53,13 +53,13 @@ session.commit()
 send_confirmation_notification()
 ```
 
-## Where Exactly It Breaks
+## Where the Bug Happens
 
 The bug is in `broken/repository.py`, inside `confirm_order`. The function crosses a boundary between database state and an external side effect, but it commits before the external side effect is known to be safe.
 
 That means the database no longer represents what actually happened.
 
-## How To Catch It
+## How to Catch This Bug
 
 Test the failure path, not only the happy path. Force the external notification to fail and then read the order from the database.
 

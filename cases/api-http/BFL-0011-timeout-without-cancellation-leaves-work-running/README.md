@@ -52,13 +52,13 @@ if simulate_timeout:
     raise ExportTimeoutError()
 ```
 
-## Where Exactly It Breaks
+## Where the Bug Happens
 
 The bug is in `broken/repository.py`, inside `run_export`. The timeout branch still writes final successful state.
 
 This makes the API contract misleading: the response says the operation timed out, but the backend state says the operation completed.
 
-## How To Catch It
+## How to Catch This Bug
 
 Assert the state after the timeout. A test that checks only `504` is too weak.
 

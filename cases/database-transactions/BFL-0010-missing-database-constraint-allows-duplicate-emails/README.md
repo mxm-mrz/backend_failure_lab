@@ -52,13 +52,13 @@ email = mapped_column(String, nullable=False)
 
 The code relies on a pre-insert check instead of a database constraint.
 
-## Where Exactly It Breaks
+## Where the Bug Happens
 
 The bug is in `broken/models.py`. The `users.email` column does not have `unique=True`, so the database does not protect the invariant.
 
 The repository check in `broken/repository.py` is useful for user-friendly errors, but it cannot be the only protection.
 
-## How To Catch It
+## How to Catch This Bug
 
 Simulate two sessions that both pass the precheck before the first insert is committed.
 
