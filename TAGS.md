@@ -71,3 +71,14 @@ Use these controlled vocabularies for future case metadata.
 - `graceful-shutdown`
 - `rate-limiting`
 - `cursor-pagination`
+
+## Audience
+
+- `api-design` — Assumes understanding of REST principles, endpoint structuring, and interface contracts.
+- `backend-interview-prep` — Assumes preparation for technical assessments focusing specifically on server-side architecture and data modeling.
+- `fastapi-developers` — Assumes familiarity with the Python language, async programming, and basic Pydantic validation.
+- `interview-prep` — Assumes preparation for general software engineering technical loops and coding rounds.
+- `junior-backend` — Assumes foundational knowledge of backend development and core web concepts.
+- `middle-backend` — Assumes strong familiarity with backend architecture, system design, and database optimizations.
+- `production-reliability` — Assumes comfort with fault tolerance, system metrics, and operational resilience.
+- `production-debugging` — Assumes experience navigating live environment logs, traces, and diagnostic tools.
